@@ -1,0 +1,27 @@
+.card{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin-left:1em;
+    border-radius: 10px;
+    padding:2em;
+}
+.cardHeader{
+font-size: 1.2em;
+color: #ff3900;
+order:2;
+}
+.cardPara{
+order:3;
+}
+.cardImg{
+    order: 1;
+    width: 69%;
+    height: 53%;
+    object-fit: contain;
+}
+.cardImg:nth-child(1){
+
+    width: 80%;
+    height: 60%;
+}
