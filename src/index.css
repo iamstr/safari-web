@@ -1,6 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
-
+:root{
+  --color-1:#ff3900;
+  --color-2:#09655f;
+  --color-3:#09faea;
+  --bg-1:#05AEA2;
+  --bg-2:#F6FFFE;
+  --bg-3:#064D49;
+  --bg-4:#FCFCFC;
+  --bg-5:#FF5A03;
+  --bg-6:#FF0000;
+  
+  }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -20,4 +31,19 @@ body {
   background-color: #ecf0f3;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  user-select: var(--color-1);
+  
 }
+*::selection{
+background-color: var(--color-1);
+color:#fff;
+
+}
+ul,li,a{
+  list-style: none;
+  text-decoration: none;
+}
+a{
+  color: #fff;
+}
+

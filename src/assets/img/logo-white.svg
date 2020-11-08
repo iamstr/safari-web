@@ -1,0 +1,6 @@
+<svg id="Component_17" data-name="Component 17" xmlns="http://www.w3.org/2000/svg" width="180" height="51" viewBox="0 0 180 51">
+  <path id="Icon_map-bus-station" data-name="Icon map-bus-station" d="M26.584,16.24H6.16a1.117,1.117,0,0,1-1.085-1.113,1.473,1.473,0,0,1,.038-.3L6.2,7.1c.092-.5.536-.6,1.068-.6H25.48c.528,0,.975.09,1.067.59l1.087,7.869a1.168,1.168,0,0,1,.038.244A1.056,1.056,0,0,1,26.584,16.24Zm-.817,8.668a2.066,2.066,0,1,1,2.077-2.071A2.073,2.073,0,0,1,25.767,24.907Zm-18.818,0a2.066,2.066,0,1,1,2.085-2.071A2.072,2.072,0,0,1,6.95,24.907ZM10.534,1.951H23.292V3.9H10.534A.974.974,0,0,1,10.534,1.951ZM28.524,4.932c-.373-1.827-1.461-2.563-3.236-3.3A28.921,28.921,0,0,0,16.32.023a29.127,29.127,0,0,0-9,1.611C5.542,2.37,4.472,3.1,4.1,4.932L2.88,15.1V29.23H4.794v1.3c0,2.6,3.189,2.6,3.189,0v-1.3H23.93v1.3a1.914,1.914,0,1,0,3.827,0v-1.3H29.67V15.1L28.524,4.932Z" transform="translate(78.365 16.598)" fill="#fff"/>
+  <text id="pass" transform="translate(113 42)" fill="#fff" font-size="30" font-family="NexaBold, Nexa"><tspan x="0" y="0">pass</tspan></text>
+  <text id="safar" transform="translate(0 42)" fill="#fff" font-size="30" font-family="NexaBold, Nexa"><tspan x="0" y="0">safar</tspan></text>
+  <circle id="Ellipse_7" data-name="Ellipse 7" cx="6" cy="6" r="6" transform="translate(89)" fill="#fff"/>
+</svg>

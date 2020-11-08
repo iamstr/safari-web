@@ -1,27 +1,31 @@
+.card :not(.card :nth-of-type(1)){
+
+    margin-left:2em;
+}
+
 .card{
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    margin-left:1em;
+    margin-left:2em;
     border-radius: 10px;
     padding:2em;
+    
+    padding-bottom:1em;
 }
 .cardHeader{
 font-size: 1.2em;
-color: #ff3900;
+color: var(--color-1);
 order:2;
+margin-top:1em
 }
 .cardPara{
 order:3;
 }
 .cardImg{
     order: 1;
-    width: 69%;
+   
     height: 53%;
     object-fit: contain;
-}
-.cardImg:nth-child(1){
-
-    width: 80%;
-    height: 60%;
+    margin-top: 1em
 }

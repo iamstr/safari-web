@@ -1,0 +1,80 @@
+.footer{
+  display: flex;
+  flex-direction: column;
+  padding: 3em 0;
+  background-image: url("../../assets/img/city.svg");
+  background: linear-gradient(180deg,var(--bg-6) 0%,var(--bg-5) 100%),url("../../assets/img/city.svg");
+  background-blend-mode: overlay;
+  background-size: contain;
+  padding-bottom: 5em;
+  padding-top: 5em;
+  height:25em;
+}
+.footerMain{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 7.8em;
+}
+.mainLeft{
+    display: flex;
+    flex-direction: column;
+}
+
+.leftList{
+    display: flex;
+    flex-direction: column;
+}
+.listUrl{
+
+    padding-top: .5em;
+}
+.mainRight{
+
+}
+.downloadInfo{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+}
+.downloadHeader{
+
+    font-size: 1.4em;
+   color: #FCFCFC;
+   margin-top: .9em;
+    width: 80%;
+    letter-spacing: 0.5px;
+  }
+  .store{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2em;
+  }
+
+  .store.storeUrl:nth-child(1){
+      height: 30%;
+  }
+  .storeUrl{
+      width: 60%;
+      color: #fff;
+  }
+  .store .storeImg:nth-child(2){
+    /* margin-top:1em; */
+    width: 50%;
+    /* margin-left: 5em; */
+  }
+  .storeImg{
+      width: 44%;
+  }
+
+  .footerSub{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3em 7.8em;
+    
+  }
+  .sub{
+    color: #fff;
+  }
