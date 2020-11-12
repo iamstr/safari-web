@@ -47,3 +47,14 @@ a{
   color: #fff;
 }
 
+.row{
+  display: flex;
+  flex-direction: row;
+}
+.column{
+  display: flex;
+  flex-direction: column;
+}
+.justify-center{
+  justify-content: center;
+}

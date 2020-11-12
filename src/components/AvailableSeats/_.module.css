@@ -1,0 +1,21 @@
+.seat{
+    position: relative;
+    padding: .8em;
+}
+.seatImg{
+    cursor: no-drop;}
+.seatName{
+    letter-spacing: .15px;
+font-size: 1.2em;
+font-weight: 800;
+
+position: absolute;
+transform: translate(-50%,50%);
+top: 29%;
+left: 47%;
+color: #fff;
+}
+.pointer{
+    
+    cursor: pointer;
+}

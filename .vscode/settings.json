@@ -1,0 +1,5 @@
+{
+    "prettier.trailingComma": "all",
+    "files.eol": "\n",
+    "editor.formatOnSave": false
+}

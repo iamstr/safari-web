@@ -9,7 +9,7 @@ function Footer(props) {
           <div className={style.mainLeft}>
             <Link to="/home" className="urlLeft">
               <img
-                src={require("../../assets/img/logo-white.svg")}
+                src={require("../../Linkssets/img/logo-white.svg")}
                 alt="our logo in white"
               />
             </Link>
@@ -20,7 +20,7 @@ function Footer(props) {
                 </Link>
               </li>
               <li className={style.listUrl}>
-                <Link to="/about-us" className={style.urlFooter}>
+                <Link to="/Linkbout-us" className={style.urlFooter}>
                   About Us
                 </Link>
               </li>
@@ -41,25 +41,25 @@ function Footer(props) {
               GET THE APP FROM YOUR FAVOURITE APP STORE
             </h5>
             <div className={style.store}>
-              <a href="" className={style.storeUrl}>
+              <Link to="" className={style.storeUrl}>
                 <img
-                  src={require("../../assets/img/google-play-download-android-app (1).svg")}
+                  src={require("../../Linkssets/img/google-play-download-android-app (1).svg")}
                   alt=""
                   className={style.storeImg}
                 />
-              </a>
-              <a
-                href=""
+              </Link>
+              <Link
+                to=""
                 className={style.storeUrl}
                 style={{ marginLeft: " -9em" }}
               >
                 <img
-                  src={require("../../assets/img/aivalable-on-the-app-store-2 (1).svg")}
+                  src={require("../../Linkssets/img/Linkivalable-on-the-app-store-2 (1).svg")}
                   alt=""
                   className={style.storeImg}
                   style={{ width: "50%" }}
                 />
-              </a>{" "}
+              </Link>{" "}
             </div>
           </div>
         </div>

@@ -1,0 +1,64 @@
+.snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    width: 30em;
+    margin-left: -125px;
+    background-color:#ecf0f3;
+   box-shadow: inset 4px 4px 4px #cbced1, inset -4px -4px 4px #ffffff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    animation-fill-mode: forwards;
+    transition:.5s;
+  }
+  .close{
+  cursor:pointer;
+  }
+  
+  .close:hover{
+  color:#ff0000;
+  transform:rotate(45deg);
+  transition:.5s;
+  }
+  .snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s;
+    animation: fadein 0.5s;
+    
+  }
+  .snackbar.closed {
+    visibility: hidden;
+    -webkit-animation:  fadeout 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation:  fadeout 1s  cubic-bezier(0.075, 0.82, 0.165, 1);
+    
+  }
+
+  
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  
