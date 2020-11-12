@@ -9,7 +9,7 @@ function Footer(props) {
           <div className={style.mainLeft}>
             <Link to="/home" className="urlLeft">
               <img
-                src={require("../../Linkssets/img/logo-white.svg")}
+                src={require("../../assets/img/logo-white.svg")}
                 alt="our logo in white"
               />
             </Link>
@@ -20,7 +20,7 @@ function Footer(props) {
                 </Link>
               </li>
               <li className={style.listUrl}>
-                <Link to="/Linkbout-us" className={style.urlFooter}>
+                <Link to="/about-us" className={style.urlFooter}>
                   About Us
                 </Link>
               </li>
@@ -43,7 +43,7 @@ function Footer(props) {
             <div className={style.store}>
               <Link to="" className={style.storeUrl}>
                 <img
-                  src={require("../../Linkssets/img/google-play-download-android-app (1).svg")}
+                  src={require("../../assets/img/google-play-download-android-app (1).svg")}
                   alt=""
                   className={style.storeImg}
                 />
@@ -54,7 +54,7 @@ function Footer(props) {
                 style={{ marginLeft: " -9em" }}
               >
                 <img
-                  src={require("../../Linkssets/img/Linkivalable-on-the-app-store-2 (1).svg")}
+                  src={require("../../assets/img/aivalable-on-the-app-store-2 (1).svg")}
                   alt=""
                   className={style.storeImg}
                   style={{ width: "50%" }}
