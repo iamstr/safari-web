@@ -1,37 +1,46 @@
 import PropTypes from "prop-types";
-import React, { useEffect, useState } from "react";
-import SnackBar from "../SnackBar/SnackBar";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./_.module.css";
 function Seats({ img, name }) {
   const [selected, setSelected] = useState(false);
+  const imgRef = useRef();
+
   const [open, setOpen] = useState(false);
   useEffect(() => {
-    console.log(selected);
-    if (img.includes("available") && selected) {
-      setOpen(true);
+    // console.log(imgRef.current.attributes, "look here");
+    // if (imgRef.current.getAttribute("data-class") === true) {
+    //   console.log(open, " open is here");
+    //   setOpen(imgRef.current.getAttribute("data-class"));
+    // }
+    console.log(open);
+    if (open) {
+      imgRef.current.setAttribute("data-class", open);
     }
-  }, [selected]);
-  const _handle = function () {
+    return () => {
+      imgRef.current.setAttribute("data-class", !open);
+    };
+  }, [open]);
+  const _handle = () => {
     if (img.includes("available") && name !== "available") {
-      setSelected(!selected);
-      console.log(selected);
+      setOpen(!open);
+      // imgRef.current.setAttribute("data-class", !open);
+      console.log("this is open", imgRef.current.getAttribute("data-class"));
     }
   };
   return (
     <div className={styles.seat}>
       <h6 className={styles.seatName}>{name || null}</h6>
       <img
-        src={selected ? require("../../assets/img/selected-seat.svg") : img}
+        src={open ? require("../../assets/img/selected-seat.svg") : img}
         alt={name}
+        data-seat={true}
         className={[
           styles.seatImg,
           img.includes("available") ? styles.pointer : null,
         ].join(" ")}
-        onClick={() => {
-          _handle();
-        }}
+        ref={imgRef}
+        onClick={() => _handle()}
       />
-      {open && <SnackBar message={`you have selected ${name}`} isOpen={open} />}
     </div>
   );
 }

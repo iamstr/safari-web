@@ -1,13 +1,91 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Seats from "../../components/AvailableSeats/Seats";
+import SnackBar from "../../components/SnackBar/SnackBar";
 import styles from "./_.module.css";
 function AvailableSeats(props) {
+  const [selectedSeat, setSelectedSeat] = useState();
+  const [openSeat, setOpenSeat] = useState(false);
+  useEffect(() => {
+    const imgArray = [...document.getElementsByTagName("Img")]
+      .filter((elem) => elem.hasAttribute("data-seat"))
+      .slice(3)
+      .filter((elem) => {
+        return elem.getAttribute("src").includes("booked-seat") ? false : true;
+      })
+      .filter((elem) => {
+        return elem !== selectedSeat;
+      });
+      imgArray.map((elem) =>
+      elem.setAttribute("src", require("../../assets/img/available-seat.svg"))
+      );
+   
+    // .forEach((elem) => {
+    //   elem.setAttribute(
+    //     "src",
+    //     require("../../assets/img/available-seat.svg")
+    //   );
+    // });
+
+    console.log(imgArray);
+  }, [selectedSeat]);
   const newLocal = require("../../assets/img/selected-seat.svg");
   const _handle = (e) => {
-    console.log([...e.currentTarget.children]);
-    e.currentTarget.removeChild([...e.currentTarget.children][1]);
-    console.log([...e.currentTarget.children]);
-    console.log(e.target);
+    const { target } = e;
+    // console.log([...e.currentTarget.children]);
+    const h6 = document.getElementsByTagName("H5")[1];
+    if (e.currentTarget.contains(h6)) {
+      // e.currentTarget.removeChild([...e.currentTarget.children][1]);
+      // console.log([...e.currentTarget.children]);
+      let array = [...e.currentTarget.children];
+      array = array.filter((elem) => elem !== h6);
+      if (target.src) {
+        if (target.src.includes("available")) {
+          setSelectedSeat(target);
+          new Promise((resolve, reject) => {
+            resolve([...document.getElementsByTagName("Img")]);
+          })
+            .then((arr) => {
+              // console.log(arr);
+              arr = arr.filter((elem) => elem.hasAttribute("data-seat"));
+              arr = arr.slice(3);
+
+              return arr;
+              // .map(
+              //   (elem) =>
+              //     (elem.src = require("../../assets/img/available-seat.svg"))
+              // );
+            })
+            .then((arr) => {
+              arr = arr
+                // .map((elem) => elem.setAttribute("data-class", false))
+                .filter((elem) => {
+                  elem.getAttribute("src").includes("booked-seat");
+                });
+              console.log(arr);
+              // arr.forEach(elem=>console.log(elem.src.includes("available-seat")))
+            })
+            .then(() => {
+              target.setAttribute("data-class", true);
+              
+              target.src = require("../../assets/img/selected-seat.svg");
+             
+            })
+            .catch((err) => console.log(err.message));
+          // let imgArray = [...document.getElementsByTagName("Img")];
+          // imgArray = imgArray
+          //   .filter((elem) => elem.hasAttribute("data-seat"))
+          //   .slice(3)
+          //   .map((elem) => elem.setAttribute("data-class", false))
+          //   .filter(
+          //     (elem) => elem.src !== require("../../assets/img/booked-seat.svg")
+          //   )
+          //   .map(
+          //     (elem) =>
+          //       (elem.src = require("../../assets/img/available-seat.svg"))
+          //   );
+        }
+      }
+    }
   };
   return (
     <main role="main" className={styles.main}>
@@ -180,6 +258,12 @@ function AvailableSeats(props) {
         </article>
       </section>
       <article className="article"></article>
+      {selectedSeat && (
+        <SnackBar
+          message={`you have selected ${selectedSeat.alt}`}
+          isOpen={!!selectedSeat}
+        />
+      )}
     </main>
   );
 }
