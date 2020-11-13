@@ -4,7 +4,7 @@ import SnackBar from "../../components/SnackBar/SnackBar";
 import styles from "./_.module.css";
 function AvailableSeats(props) {
   const [selectedSeat, setSelectedSeat] = useState();
-  const [openSeat, setOpenSeat] = useState(false);
+
   useEffect(() => {
     const imgArray = [...document.getElementsByTagName("Img")]
       .filter((elem) => elem.hasAttribute("data-seat"))
@@ -15,16 +15,9 @@ function AvailableSeats(props) {
       .filter((elem) => {
         return elem !== selectedSeat;
       });
-      imgArray.map((elem) =>
+    imgArray.map((elem) =>
       elem.setAttribute("src", require("../../assets/img/available-seat.svg"))
-      );
-   
-    // .forEach((elem) => {
-    //   elem.setAttribute(
-    //     "src",
-    //     require("../../assets/img/available-seat.svg")
-    //   );
-    // });
+    );
 
     console.log(imgArray);
   }, [selectedSeat]);
@@ -41,48 +34,10 @@ function AvailableSeats(props) {
       if (target.src) {
         if (target.src.includes("available")) {
           setSelectedSeat(target);
-          new Promise((resolve, reject) => {
-            resolve([...document.getElementsByTagName("Img")]);
-          })
-            .then((arr) => {
-              // console.log(arr);
-              arr = arr.filter((elem) => elem.hasAttribute("data-seat"));
-              arr = arr.slice(3);
 
-              return arr;
-              // .map(
-              //   (elem) =>
-              //     (elem.src = require("../../assets/img/available-seat.svg"))
-              // );
-            })
-            .then((arr) => {
-              arr = arr
-                // .map((elem) => elem.setAttribute("data-class", false))
-                .filter((elem) => {
-                  elem.getAttribute("src").includes("booked-seat");
-                });
-              console.log(arr);
-              // arr.forEach(elem=>console.log(elem.src.includes("available-seat")))
-            })
-            .then(() => {
-              target.setAttribute("data-class", true);
-              
-              target.src = require("../../assets/img/selected-seat.svg");
-             
-            })
-            .catch((err) => console.log(err.message));
-          // let imgArray = [...document.getElementsByTagName("Img")];
-          // imgArray = imgArray
-          //   .filter((elem) => elem.hasAttribute("data-seat"))
-          //   .slice(3)
-          //   .map((elem) => elem.setAttribute("data-class", false))
-          //   .filter(
-          //     (elem) => elem.src !== require("../../assets/img/booked-seat.svg")
-          //   )
-          //   .map(
-          //     (elem) =>
-          //       (elem.src = require("../../assets/img/available-seat.svg"))
-          //   );
+          target.setAttribute("data-class", true);
+
+          target.src = require("../../assets/img/selected-seat.svg");
         }
       }
     }
