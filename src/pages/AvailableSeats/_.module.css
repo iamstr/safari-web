@@ -24,8 +24,23 @@
 
 .main{
    display: flex;
-   margin:auto 3em;
+   margin: 3em auto;
+   position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  transition: 0.5s;
+  padding: 20px;
+
+}
+.active {
+  filter: blur(20px);
+  pointer-events: none;
+  user-select: none;
+   transition: 0.5s;
 }
 .aside{
     width:20%;
@@ -175,3 +190,5 @@ font-weight: 800;
  div p.info:nth-child(1){
      padding-left: 2em;
  }
+
+ 

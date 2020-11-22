@@ -1,26 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
-:root{
-  --color-1:#ff3900;
-  --color-2:#09655f;
-  --color-3:#09faea;
-  --bg-1:#05AEA2;
-  --bg-2:#F6FFFE;
-  --bg-3:#064D49;
-  --bg-4:#FCFCFC;
-  --bg-5:#FF5A03;
-  --bg-6:#FF0000;
-  
-  }
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
+:root {
+  --color-1: #ff3900;
+  --color-2: #09655f;
+  --color-3: #09faea;
+  --bg-1: #05aea2;
+  --bg-2: #f6fffe;
+  --bg-3: #064d49;
+  --bg-4: #fcfcfc;
+  --bg-5: #ff5a03;
+  --bg-6: #ff0000;
+  --body: #ecf0f3;
+}
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 * {
-  font-family:  -apple-system, "Poppins",  BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, "Poppins", BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -32,29 +33,46 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   user-select: var(--color-1);
-  
 }
-*::selection{
-background-color: var(--color-1);
-color:#fff;
-
+*::selection {
+  background-color: var(--color-1);
+  color: #fff;
 }
-ul,li,a{
+ul,
+li,
+a {
   list-style: none;
   text-decoration: none;
 }
-a{
+a {
   color: #fff;
 }
 
-.row{
+.row {
   display: flex;
   flex-direction: row;
 }
-.column{
+.column {
   display: flex;
   flex-direction: column;
 }
-.justify-center{
+.justify-center {
   justify-content: center;
+}
+
+.slide {
+  animation: slide 0.2s ease-out forwards;
+
+  opacity: 0;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }

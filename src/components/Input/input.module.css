@@ -1,0 +1,33 @@
+.formControl {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+}
+
+.formControl label {
+  color: #09655f;
+  padding-left: 0.5em;
+}
+
+.input {
+  border-radius: 15px;
+  width: 249px;
+  height: 65px;
+  padding-left: 1.5em;
+  border: none;
+  background: #ecf0f3;
+  box-shadow: inset 4px 4px 4px #00000036, inset -4px -4px 4px #fff;
+  margin-top: 16px;
+  position: relative;
+  transition: 0.5s;
+}
+.formControl .input::placeholder {
+  padding-left: 0.5em;
+  font-style: italic;
+}
+
+.formControl .input:focus {
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}

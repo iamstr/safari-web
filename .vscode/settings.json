@@ -1,5 +1,11 @@
 {
     "prettier.trailingComma": "all",
     "files.eol": "\n",
-    "editor.formatOnSave": false
+    "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true,
+    "eslint.autoFixOnSave": true
+  },
+     "editor.fontFamily": "Fira Code Retina",
+    "editor.fontLigatures": true,
 }

@@ -1,18 +1,19 @@
 import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
+import usePrevious from "../../customHooks/usePrevious";
 import styles from "./snackbar.module.css";
 function SnackBar({ message, isOpen }) {
   const [close, setClose] = useState(true);
-
+  const prevCount = usePrevious(close);
   useEffect(() => {
-    if (message) {
-      setClose(true);
-    }
+    console.log({ prevCount, close });
+
+    setClose(true);
 
     return () => {
       setClose(false);
     };
-  }, [message]);
+  }, [message, close]);
   return (
     <div
       className={[

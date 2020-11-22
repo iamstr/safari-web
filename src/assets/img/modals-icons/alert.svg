@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140" height="140" viewBox="0 0 140 140">
+  <defs>
+    <filter id="Ellipse_52" x="0" y="0" width="140" height="140" filterUnits="userSpaceOnUse">
+      <feOffset dy="12" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feFlood flood-color="#ff401a"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f9f9f9"/>
+      <stop offset="1" stop-color="#e1fffd"/>
+    </linearGradient>
+    <filter id="Icon_material-warning" x="24.346" y="9.862" width="115.061" height="113.138" filterUnits="userSpaceOnUse">
+      <feOffset dx="12" dy="12" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur-2"/>
+      <feFlood flood-color="#ff6400"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Ellipse_52)">
+    <circle id="Ellipse_52-2" data-name="Ellipse 52" cx="25" cy="25" r="25" transform="translate(45 33)" fill="#ff401a"/>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Icon_material-warning)">
+    <path id="Icon_material-warning-2" data-name="Icon material-warning" d="M1.5,26.138H26.561L14.03,3Zm13.669-3.653H12.891V20.049h2.278Zm0-4.871H12.891V12.742h2.278Z" transform="translate(55.85 39.86)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

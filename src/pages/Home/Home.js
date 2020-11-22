@@ -37,6 +37,7 @@ export default function Home() {
   const setEmailContactHandler = e => {
     setEmail(e);
   };
+
   const setMessageContactHandler = e => {
     setMessage(e);
   };
@@ -132,7 +133,7 @@ safaripass.com"
             properties={{
               width: " 100%",
               marginLeft: "0em",
-              transform: "translateX(-27px)"
+              transform: "translateX(-27px)",
             }}
           />
           <Card
@@ -142,7 +143,7 @@ safaripass.com"
             properties={{
               width: " 90%",
 
-              transform: "translate(-5px,-48px)"
+              transform: "translate(-5px,-48px)",
             }}
           />
           <Card
@@ -152,7 +153,7 @@ safaripass.com"
             properties={{
               width: " 59%",
 
-              transform: "translate(6px,-26px)"
+              transform: "translate(6px,-26px)",
             }}
           />
           <Card
@@ -162,7 +163,7 @@ safaripass.com"
             properties={{
               width: " 90%",
 
-              transform: "translateY(-40px)"
+              transform: "translateY(-40px)",
             }}
           />
         </div>
@@ -188,7 +189,7 @@ safaripass.com"
               alt="Book you inter city bus tickets,real time from the best companies in Kenya"
               style={{
                 marginLeft: "-10em",
-                ransform: " translate(-149px, -56px)"
+                ransform: " translate(-149px, -56px)",
               }}
             />
           </article>
@@ -307,7 +308,7 @@ via phone, chat or email"
                   fullname,
                   email,
                   message,
-                  check: !!typeof setEmail
+                  check: !!typeof setEmail,
                 })
               }
             >
