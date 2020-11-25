@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140" height="140" viewBox="0 0 140 140">
+  <defs>
+    <filter id="Ellipse_52" x="0" y="0" width="140" height="140" filterUnits="userSpaceOnUse">
+      <feOffset dy="12" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feFlood flood-color="#ff401a"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_161" data-name="Group 161" transform="translate(-769 -1264)">
+    <g transform="matrix(1, 0, 0, 1, 769, 1264)" filter="url(#Ellipse_52)">
+      <circle id="Ellipse_52-2" data-name="Ellipse 52" cx="25" cy="25" r="25" transform="translate(45 33)" fill="#ff401a"/>
+    </g>
+    <path id="Icon_material-payment" data-name="Icon material-payment" d="M27.3,6H5.7A2.585,2.585,0,0,0,3.013,8.5L3,23.5A2.6,2.6,0,0,0,5.7,26H27.3A2.6,2.6,0,0,0,30,23.5V8.5A2.6,2.6,0,0,0,27.3,6Zm0,17.5H5.7V16H27.3Zm0-12.5H5.7V8.5H27.3Z" transform="translate(822.365 1306.453)" fill="#fff"/>
+  </g>
+</svg>

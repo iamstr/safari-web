@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="10" viewBox="0 0 14 10">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f52e2b"/>
+      <stop offset="1" stop-color="#ff6f2e"/>
+    </linearGradient>
+  </defs>
+  <path id="Icon_open-chevron-bottom" data-name="Icon open-chevron-bottom" d="M2.625,0,0,2.727,7,10l7-7.273L11.375,0,7,4.545Z" fill="url(#linear-gradient)"/>
+</svg>

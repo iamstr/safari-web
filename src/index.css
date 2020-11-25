@@ -4,12 +4,14 @@
   --color-1: #ff3900;
   --color-2: #09655f;
   --color-3: #09faea;
+  --color-4: #09b17d;
   --bg-1: #05aea2;
   --bg-2: #f6fffe;
   --bg-3: #064d49;
   --bg-4: #fcfcfc;
   --bg-5: #ff5a03;
   --bg-6: #ff0000;
+  --light-green: #f1ffff;
   --body: #ecf0f3;
 }
 
@@ -61,7 +63,7 @@ a {
 }
 
 .slide {
-  animation: slide 0.2s ease-out forwards;
+  animation: slide 0.3s 0.5s ease-out forwards;
 
   opacity: 0;
 }

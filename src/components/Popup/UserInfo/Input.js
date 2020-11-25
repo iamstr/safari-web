@@ -22,7 +22,7 @@ function UserInput(props) {
     setID(e);
   };
   return (
-    <form className="column">
+    <form className={["column", style.container].join(" ")}>
       <Input
         type="text"
         handler={nameHandler}

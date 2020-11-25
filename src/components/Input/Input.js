@@ -10,7 +10,7 @@ const Input = React.memo(({ handler, type, label, placeholder }) => {
       <input
         type={type}
         value={value}
-        id={label}
+        id={label.trim()}
         onChange={e => {
           handler(e.target.value);
           setValue(e.target.value);
