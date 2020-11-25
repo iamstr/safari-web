@@ -37,7 +37,14 @@ const CheckMpesaPrompt = React.memo(function CheckMpesaPrompt(props) {
       </div> */}
       <div className="row">
         <div className={["row", styles.osama].join(" ")}>
-          <img src={Check} alt="alert icon" className={null} />
+          <div className={styles.moveImg}>
+            <img
+              src={Check}
+              alt="alert icon"
+              className={timer ? styles.move : null}
+            />
+          </div>
+
           <div className="column">
             <h5
               className={[styles.paymentMethod, styles.mpesaPrompt].join(" ")}
@@ -57,7 +64,7 @@ const CheckMpesaPrompt = React.memo(function CheckMpesaPrompt(props) {
               <button
                 className={[styles.button, styles.mpesaButton].join(" ")}
                 disabled={timer != 0 ? true : false}
-                onClick={() => setContext(context + 1)}
+                onClick={() => setTimer(60)}
               >
                 {timer != 0
                   ? "Resend code in 00:" + (timer < 10 ? `0${timer}` : timer)
