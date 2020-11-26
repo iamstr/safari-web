@@ -5,6 +5,7 @@ import Container from "./Container";
 import CheckMpesaPrompt from "./Payment/CheckMpesaPrompt";
 import ConfirmMpesa from "./Payment/Confirm";
 import Payment from "./Payment/Payment";
+import Success from "./Payment/Success";
 import UseOtherNumber from "./Payment/UseOtherNumber";
 import UserInput from "./UserInfo/Input";
 
@@ -17,6 +18,7 @@ function Steps(props) {
     ConfirmMpesa,
     UseOtherNumber,
     CheckMpesaPrompt,
+    Success,
   ];
   return (
     <>

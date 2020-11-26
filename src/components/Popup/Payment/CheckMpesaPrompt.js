@@ -64,7 +64,7 @@ const CheckMpesaPrompt = React.memo(function CheckMpesaPrompt(props) {
               <button
                 className={[styles.button, styles.mpesaButton].join(" ")}
                 disabled={timer != 0 ? true : false}
-                onClick={() => setTimer(60)}
+                onClick={() => setContext(context + 1)}
               >
                 {timer != 0
                   ? "Resend code in 00:" + (timer < 10 ? `0${timer}` : timer)
